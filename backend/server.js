@@ -4,7 +4,14 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+
+// ✅ Fix CORS - allow your frontend URL
+app.use(cors({
+  origin: 'https://lost-found-1-1y3y.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
 app.use('/api', require('./routes/auth'));
