@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://lost-found-cvwr.onrender.com/api';
 
 export default function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });

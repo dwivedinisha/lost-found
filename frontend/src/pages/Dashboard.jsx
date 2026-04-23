@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://lost-found-cvwr.onrender.com/api';
 
 export default function Dashboard() {
   const [items, setItems] = useState([]);
